@@ -24,7 +24,8 @@ class ProductRepository:
         
         self._ES: Final = AsyncElasticsearch([{
             "host": es_config.host,
-            "port": es_config.port
+            "port": es_config.port,
+            "scheme": "http"
         }])
         
         self._LOGGER: Final = logging.getLogger("productRepository")
